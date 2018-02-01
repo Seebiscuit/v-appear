@@ -25,7 +25,7 @@ $('.selector').on('disappear', function(event, $allDisappearedElements) {
 });
 ```
 
-jQuery.appear provides a custom filter to check if an element is(n't) visisble.
+The `appear`/`disappear` custom filter can be used to check if an element is(n't) visisble.
 
 ```js
 $('.selector').is(':appeared')
