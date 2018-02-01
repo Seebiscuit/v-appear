@@ -50,11 +50,11 @@ function process() {
   ) {
     var appearedList = appeared(selectors[index]);
 
-    appearedList.trigger("appear", [appeared]);
+    appearedList.trigger("appear", appearedList);
 
     if (priorAppearedList[index]) {
       var $disappeared = priorAppearedList[index].not(appearedList);
-      $disappeared.trigger("disappear", [$disappeared]);
+      $disappeared.trigger("disappear", disappeared);
     }
     priorAppearedList[index] = appearedList;
   }
