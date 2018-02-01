@@ -1,6 +1,6 @@
 {
   "name": "v-appear",
-  "version": "0.1.0.2",
+  "version": "0.1.2",
   "description": "A jQuery plugin that let's you know when an element is visible in the viewport, even if the elements are inside a scrollable container.",
   "main": "dist/v-appear.js",
   "scripts": {
