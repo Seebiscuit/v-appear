@@ -41,5 +41,7 @@ $('.selector').is(':appeared')
 |**`vOffset`**|`{Double}`|Default: `0`. Number of pixels from the viewport _vertical_ edge the `element` can be found before triggering the `appear` event |
 |**`hOffset`**|`{Double}`|Default: `0`. Number of pixels from the viewport _horizontal_ edge the `element` can be found before triggering the `appear` event |
 
+-------
+
 #### Known issues
 There are rare situations where the `document` position of an `<iframe>` does not match the `iframe` position or size (for example, this if common inside a CodePen iframed sandbox). If the plugin is run in an `<iframe>` with this issue, then the script will not work reliably, since it expects the `document` position and size to reflect what is actualy viewed as the `iframe` viewport. 
