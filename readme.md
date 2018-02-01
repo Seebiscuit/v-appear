@@ -12,6 +12,8 @@ When an element becomes visible or not in it's container (the container can eith
 npm install --save v-appear
 ```
 
+Import the `v-appear.js` from it's `dist` folder in a script tag, or require the plugin as a module before you intend to use it. 
+
 ## Usage
 
 ```js
