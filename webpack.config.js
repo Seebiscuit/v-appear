@@ -1,6 +1,5 @@
 const path = require("path");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: "./src/index.js",
@@ -22,8 +21,7 @@ module.exports = {
   plugins: [
     new UglifyJSPlugin({
       sourceMap: true
-    }),
-    new BundleAnalyzerPlugin()
+    })
   ],
   externals: {
     jquery: {

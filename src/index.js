@@ -3,7 +3,7 @@ var selectors = [];
 var check_bound = false;
 var debounceCheck = false;
 var defaults = {
-  interval: 250,
+  interval: 50,
   forceProcess: false,
   container: document.documentElement,
   vOffset: 0,
@@ -111,7 +111,7 @@ $.fn.extend({
     }
 
     if (options.forceProcess) {
-      setTimeout(process, opts.interval);
+      setTimeout(process, options.interval);
     }
 
     addSelector({

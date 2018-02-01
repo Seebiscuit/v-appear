@@ -1,6 +1,6 @@
 {
   "name": "v-appear",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "A jQuery plugin that let's you know when an element is visible in the viewport, even if the elements are inside a scrollable container.",
   "main": "dist/v-appear.js",
   "scripts": {
@@ -21,7 +21,6 @@
     "babel-preset-env": "^1.6.1",
     "jquery": "^3.3.1",
     "uglifyjs-webpack-plugin": "^1.1.8",
-    "webpack": "^3.10.0",
-    "webpack-bundle-analyzer": "^2.9.2"
+    "webpack": "^3.10.0"
   }
 }
