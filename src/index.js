@@ -5,7 +5,7 @@ var debounceCheck = false;
 var defaults = {
   interval: 250,
   forceProcess: false,
-  container: window,
+  container: document.documentElement,
   vOffset: 0,
   hOffset: 0
 };
