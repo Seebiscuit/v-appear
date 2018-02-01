@@ -60,10 +60,17 @@ function process() {
   }
 }
 
-function addSelector(selector) {
-  selectors.push(selector);
-  priorAppearedList.push();
-}
+  function addSelector(selector) {
+    if (!selectors.some((s, i) => {
+      if ($(s.selector).is(selector))
+        return false;
+
+      return true;
+    })) {
+      selectors.push(selector);
+      priorAppearedList.push();
+    }
+  }
 
 function destroy(selector) {
   selectors = selectors.filter((s, i) => {
