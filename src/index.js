@@ -54,7 +54,7 @@ function process() {
 
     if (priorAppearedList[index]) {
       var $disappeared = priorAppearedList[index].not(appearedList);
-      $disappeared.trigger("disappear", disappeared);
+      $disappeared.trigger("disappear", $disappeared);
     }
     priorAppearedList[index] = appearedList;
   }
