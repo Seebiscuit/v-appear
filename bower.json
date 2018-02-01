@@ -1,0 +1,24 @@
+{
+  "name": "v-appear",
+  "description": "A jQuery plugin that let's you know when an element is visible in the viewport, even if the elements are inside a scrollable container.",
+  "main": "dist/v-appear.js",
+  "authors": [
+    "Gary Kaganas"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "visible",
+    "appear",
+    "disappear",
+    "jQuery",
+    "plugin"
+  ],
+  "homepage": "https://github.com/Seebiscuit/v-appear",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
