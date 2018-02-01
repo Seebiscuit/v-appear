@@ -6,24 +6,31 @@ This is a extension of the original jquery.appear plugin by Andrey Sidorov, @mor
 
 When an element becomes visible or not in it's container (the container can either be an elemnt with scrolling or the `document`) jQuery.appear triggers *appear*/*disappear* events on the observed elements. 
 
-##Install
+## Install
 
 ```bash
 npm install --save v-appear
 ```
 
-##Usage
+## Usage
 
 ```js
-$('.selector').appear(); // It supports optional hash with "force_process" and "interval" keys. Check source code for details.
+$('.selector').appear(options); // See options, below  
 
-$('.selector').on('appear', function(event, $all_appeared_elements) {
-  // this element is now inside browser viewport
+$('.selector').on('appear', function(event, $allAppearedElements) {
+  // this element is now visible in the viewport and in it's parent container (if provided)
 });
-$('.selector').on('disappear', function(event, $all_disappeared_elements) {
-  // this element is now outside browser viewport
+$('.selector').on('disappear', function(event, $allDisappearedElements) {
+  // this element is now not visible in the viewport or in it's parent container (if provided)
 });
 ```
+
+jQuery.appear provides a custom filter to check if an element is(n't) visisble.
+
+```js
+$('.selector').is(':appeared')
+```
+
 ### Options
 |Name|Type|Description|
 |:--:|:--:|:----------|
@@ -31,9 +38,3 @@ $('.selector').on('disappear', function(event, $all_disappeared_elements) {
 |**`forceProcess`**|`{Boolean}`|Default: `false`. Immediately check if the `element` is(n't) visible and fire `appear`/`disappear` events accordingly. |
 |**`vOffset`**|`{Double}`|Default: `0`. Number of pixels from the viewport _vertical_ edge the `element` can be found before triggering the `appear` event |
 |**`hOffset`**|`{Double}`|Default: `0`. Number of pixels from the viewport _horizontal_ edge the `element` can be found before triggering the `appear` event |
-
-Also this plugin provides custom jQuery filter to check if an element is(n't) visisble.
-
-```js
-$('.selector').is(':appeared')
-```
